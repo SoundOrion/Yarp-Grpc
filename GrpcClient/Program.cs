@@ -7,6 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Grpc.Net.Client;
 using GrpcClient.Services;
 using Microsoft.AspNetCore.Mvc;
+using MagicOnion.Client;
+using MagicOnionService.Shared;
 
 Console.WriteLine("サブディレクトリでホストされている gRPC サービスの呼び出し");
 Console.WriteLine("https://learn.microsoft.com/ja-jp/aspnet/core/grpc/troubleshoot?view=aspnetcore-8.0#calling-grpc-services-hosted-in-a-sub-directory");
@@ -48,6 +50,15 @@ var serviceProvider = serviceCollection.BuildServiceProvider();
 var service = serviceProvider.GetRequiredService<IGreeterService>();
 var response3 = await service.SayHello("Hello World! from service 3");
 Console.WriteLine(response3);
+
+
+
+var handler4 = new SubdirectoryHandler(new HttpClientHandler(), "/service4");
+var channel4 = GrpcChannel.ForAddress("https://localhost:8000", new GrpcChannelOptions { HttpHandler = handler4 });
+var client4 = MagicOnionClient.Create<IMyFirstService>(channel4);
+var result = await client4.SumAsync(123, 456);
+Console.WriteLine($"Result: {result}");
+
 
 Console.ReadKey();
 

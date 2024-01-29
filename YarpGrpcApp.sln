@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcClient", "GrpcClient\Gr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcService3", "GrpcService3\GrpcService3.csproj", "{D07179BE-34A4-4AE9-94AB-49363279A59C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicOnionService", "MagicOnionService\MagicOnionService.csproj", "{8C0C064C-153A-429A-87F8-3184312279D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicOnionService.Shared", "MagicOnionService.Shared\MagicOnionService.Shared.csproj", "{613C095B-5F0D-43B2-B3F3-BCF4D834DD73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,8 +43,19 @@ Global
 		{D07179BE-34A4-4AE9-94AB-49363279A59C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D07179BE-34A4-4AE9-94AB-49363279A59C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D07179BE-34A4-4AE9-94AB-49363279A59C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C0C064C-153A-429A-87F8-3184312279D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C0C064C-153A-429A-87F8-3184312279D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C0C064C-153A-429A-87F8-3184312279D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C0C064C-153A-429A-87F8-3184312279D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{613C095B-5F0D-43B2-B3F3-BCF4D834DD73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{613C095B-5F0D-43B2-B3F3-BCF4D834DD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{613C095B-5F0D-43B2-B3F3-BCF4D834DD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{613C095B-5F0D-43B2-B3F3-BCF4D834DD73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DFE93C0-DD73-4A96-B311-65D2132B5220}
 	EndGlobalSection
 EndGlobal
